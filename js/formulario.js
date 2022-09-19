@@ -2,7 +2,7 @@ const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-	tipDocumento: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	
 	numDocumento:/^\d{5,12}$/, // 5 a 14 numeros.
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -12,7 +12,7 @@ const expresiones = {
 }
 
 const campos = {
-	tipDocumento: false,
+	
 	numDocumento: false,
 	nombre: false,
 	apellido: false,
@@ -23,9 +23,7 @@ const campos = {
 
 const validarFormulario = (e) => {
 	switch (e.target.name) {
-		case "tipDocumento":
-			validarCampo(expresiones.tipDocumento, e.target, 'tipDocumento');
-		break;
+	
 		case "numDocumento":
 			validarCampo(expresiones.numDocumento, e.target, 'numDocumento');
 		break;
@@ -105,6 +103,7 @@ date.onchange = e => {
 		campos['data'] = true;
 	}
 }
+ 
 
 
 inputs.forEach((input) => {
@@ -116,7 +115,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.tipDocumento && campos.numDocumento && campos.nombre && campos.apellido && campos.date && campos.password && campos.correo && campos.telefono && terminos.checked ){
+	if( campos.numDocumento && campos.nombre && campos.apellido && campos.date && campos.password && campos.correo && campos.telefono && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
