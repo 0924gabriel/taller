@@ -39,10 +39,10 @@ const validarFormulario = (e) => {
 			validarCampo(expresiones.data, e.target, 'data')
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
-			validardate();
+			validarPassword2();
 		break;
-		case "date":
-			validardate();
+		case "password2":
+			validarPassword2();
 		break;
 		case "correo":
 			validarCampo(expresiones.correo, e.target, 'correo');
@@ -68,35 +68,34 @@ const validarCampo = (expresion, input, campo) => {
 	}
 }
 
-const validardate = () => {
+const validarPassword2 = () => {
 	const inputPassword1 = document.getElementById('password');
-	const inputdate = document.getElementById('date');
+	const inputPassword2 = document.getElementById('password2');
 
-	if(inputPassword1.value !== inputdate.value){
-		document.getElementById(`grupo__date`).classList.add('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__date`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__date i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__date i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__date .formulario__input-error`).classList.add('formulario__input-error-activo');
+	if(inputPassword1.value !== inputPassword2.value){
+		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
+		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
 		campos['password'] = false;
 	} else {
-		document.getElementById(`grupo__date`).classList.remove('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__date`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__date i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__date i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__date .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
+		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
 		campos['password'] = true;
 	}
 }
 date.onchange = e => {
 	const date = parseInt(e.target.value)
-	if(date < 2002){
+	if(date > 2002){
 		document.getElementById(`grupo__date`).classList.add('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__date`).classList.remove('formulario__grupo-correcto');
 		document.querySelector(`#grupo__date i`).classList.add('fa-times-circle');
 		document.querySelector(`#grupo__date i`).classList.remove('fa-check-circle');
 		document.querySelector(`#grupo__date .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos['date'] = false
 	}else{
 		document.getElementById(`grupo__date`).classList.remove('formulario__grupo-incorrecto');
 		document.getElementById(`grupo__date`).classList.add('formulario__grupo-correcto');
@@ -106,6 +105,7 @@ date.onchange = e => {
 		campos['data'] = true;
 	}
 }
+
 
 inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);
