@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="images/logo-removebg-preview.png" />
+   <title>Figuras</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="css/estilos2.css">
+
+</head>
+
+<body>
+
+   <section class="header">
+
+
+      <nav class="navbar">
+         <a href="index.html">home</a>
+         <a href="punto1.html">palabras</a>
+         <a href="punto2.html">Temperatura</a>
+         <a href="punto3.html">triangulo</a>
+         <a href="punto4.html">Instructores</a>
+         <a href="punto5.html">Figuras</a>
+         <a href="punto6.html">formularios</a>
+      </nav>
+   
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </section>
+
+
+
+   <div id="ventanaModal" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal"><i class="fa-solid fa-xmark"></i></span>
+         <h2>Parametro del cuadrado</h2>
+         <label for="">Digite el lado del cuadrado </label><br>
+         <input id="lado" type="number"><br>
+         <button class="btn" id="btn">Calcular</button>
+
+         <div id="res">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+   <div id="ventanaModal-area" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal-area"><i class="fa-solid fa-xmark"></i></span>
+         <h2>Area del cuadrado</h2>
+         <label for="">Digite la base del cuadrado</label><br>
+         <input id="cua-base" type="number"><br>
+         <label for="">Digite la altura del cuadrado </label><br>
+         <input id="cua-altura" type="number"><br>
+         <button class="btn" id="btn-area">Calcular</button>
+
+         <div id="res1">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+   <div id="ventanaModal-rec" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal-rec"><i class="fa-solid fa-xmark"></i></span>
+         <h2>Parametro del rectangulo</h2>
+         <label for="">Digite la base del rectangulo </label><br>
+         <input id="rec-base" type="number"><br>
+         <label for="">Digite la altura del rectangulo </label><br>
+         <input id="rec-altura" type="number"><br>
+         <button class="btn" id="btn-rec">Calcular</button>
+
+         <div id="res2">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+   <div id="ventanaModal-rec-area" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal-rec-area"><i class="fa-solid fa-xmark"></i></span>
+         <h2>Area del rectangulo</h2>
+         <label for="">Digite la base del rectangulo </label><br>
+         <input id="rec-base-area" type="number" ><br>
+         <label for="">Digite la altura del rectangulo </label><br>
+         <input id="rec-altura-area" type="number"><br>
+         <button class="btn" id="btn-rec-area">Calcular</button>
+
+         <div id="res3">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+
+   <div id="ventanaModal-tri" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal-tri"><i class="fa-solid fa-xmark"></i></span>
+         <h2>Parametro del Triangulo</h2>
+         <label for="">Digite el 1 lado del triangulo </label><br>
+         <input id="tri-lado1" type="number"><br>
+         <label for="">Digite el 2 lado del triangulo </label><br>
+         <input id="tri-lado2" type="number"><br>
+         <label for="">Digite el 3 lado del triangulo</label><br>
+         <input id="tri-lado3" type="number" ><br>
+         <button class="btn" id="btn-tri">Calcular</button>
+
+         <div id="res-tri">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+   <div id="ventanaModal-tri1" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal-tri-area"><i class="fa-solid fa-xmark"></i></span>
+         <h2>area del Triangulo</h2>
+         <label for="">Digite la base del triangulo </label><br>
+         <input id="base-tri" type="number"><br>
+         <label for="">Digite la altura del triangulo </label><br>
+         <input id="altura-tri" type="number"><br>
+        
+         <button class="btn" id="btn-tri1">Calcular</button>
+
+         <div id="res-tri1">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+
+   <div id="ventanaModal-cir" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal-cir"><i class="fa-solid fa-xmark"></i></span>
+         <h2>Parametro del circulo</h2>
+         <label for="">Digite el radio del circulo </label><br>
+         <input id="radio" type="number"><br>
+   
+         <button class="btn" id="btn-cir">Calcular</button>
+
+         <div id="res-cir">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+
+   <div id="ventanaModal-cir1" class="modal">
+      <div class="contenidoModal">
+
+         <span class="cerrarModal-cir1"><i class="fa-solid fa-xmark"></i></span>
+         <h2>Area del circulo</h2>
+         <label for="">Digite el radio del circulo </label><br>
+         <input id="radio-area" type="number"><br>
+   
+         <button class="btn" id="btn-cir-area">Calcular</button>
+
+         <div id="res-cir-area">
+
+
+         </div>
+
+
+      </div>
+
+   </div>
+
+
+
+
+   <section class="packages">
+
+      
+
+        
+            <div class="image">
+               <img src="/img/cuadrado.jpg" alt=""  width="300px">
+               <h3>Cuadrado</h3>
+               <button type="button" class="btn btn-outline-primary" id="abrirModal">Parametro</button>
+               <button class="btn" id="abrirModal-area">Area</button>
+            </div>
+         
+            
+
+
+
+            <div class="image">
+               <img src="/img/rectangulo.png" alt="" width="300px">
+               <h3>Rectangulo</h3>
+               <button class="btn" id="abrirModal-rec">Parametro</button>
+               <button class="btn" id="abrirModal-rec-area">Area</button>
+            </div>
+
+         
+            <div class="image">
+               <img src="/img/triangulo.png" alt="" >
+               <h3>Triangulo</h3>
+               <button class="btn" id="abrirModal-tri">Parametro</button>
+               <button class="btn" id="abrirModal-tri-area">Area</button>
+            </div>
+      
+            <div class="image">
+               <img src="/img/cir.png" alt="" >
+               <h3>Circulo</h3>
+               <button class="btn" id="abrirModal-cir">Parametro</button>
+               <button class="btn" id="abrirModal-cir-area">Area</button>
+            </div>
+         
+         
+
+
+     
+
+   </section>
+
+
+
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+   <script src="js/script.js"></script>
+   <script src="/js/modals.js"></script>
+   <script src="/js/AreaYParametro.js"></script>
+
+</body>
+
+</html>
